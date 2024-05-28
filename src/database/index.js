@@ -1,3 +1,4 @@
+// Database class is for demo purposes only.
 class Database {
   constructor() {
     this.store = [];

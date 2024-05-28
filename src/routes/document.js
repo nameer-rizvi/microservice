@@ -1,3 +1,4 @@
+// Document routes are for demo purposes only.
 const database = require("../database");
 
 function postDocumentRoute(req, res) {
