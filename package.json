@@ -1,0 +1,43 @@
+{
+  "name": "microservice",
+  "version": "0.0.1",
+  "description": "Microservice boilerplate built in Node.js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint; exit 0",
+    "dev": "PORT=3000 NODE_ENV=development nodemon src/index.js",
+    "start": "PORT=3000 NODE_ENV=production node src/index.js",
+    "pm2-start": "yarn && pm2 start ecosystem.config.js && pm2 logs",
+    "pm2-restart": "yarn && pm2 restart ecosystem.config.js --update-env && pm2 logs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nameer-rizvi/microservice.git"
+  },
+  "keywords": [
+    "nodejs",
+    "microservice",
+    "boilerplate"
+  ],
+  "author": "Nameer Rizvi (https://github.com/nameer-rizvi)",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/nameer-rizvi/microservice/issues"
+  },
+  "homepage": "https://github.com/nameer-rizvi/microservice#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "nodemon": "^3.1.1"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0"
+  }
+}
