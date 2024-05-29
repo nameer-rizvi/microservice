@@ -14,11 +14,11 @@ Run ESLint on .js files in /src and return a report on syntax warnings/errors.
 
 `yarn dev`
 
-Start Express server in development mode with nodemon watching for file changes.
+Start Express server in development environment with nodemon watching for file changes.
 
 `yarn start`
 
-Start Express server in production mode.
+Start Express server in test environment.
 
 `yarn pm2-start`
 
