@@ -47,6 +47,8 @@ const ecosystemConfig = {
       name: "microservice",
       script: "./src/index.js",
       env: {
+        PORT: 3000,
+        NODE_ENV: "production",
         TZ: "America/New_York",
       },
     },

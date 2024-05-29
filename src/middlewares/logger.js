@@ -4,6 +4,8 @@ function loggerMiddleware(req, res, next) {
   const start = Date.now();
 
   res.on("finish", function handleResFinish() {
+    const timestamp = new Date().toLocaleString().replace(", ", " ");
+
     const statusCodeColor =
       res.statusCode < 300
         ? "32m"
@@ -17,7 +19,7 @@ function loggerMiddleware(req, res, next) {
 
     const duration = (end - start).toLocaleString();
 
-    const log = `\x1b[${statusCodeColor}${res.statusCode}\x1b[0m ${req.method} ${req.path} by ${req.ip} took ${duration} ms.`;
+    const log = `[${timestamp}] \x1b[${statusCodeColor}${res.statusCode}\x1b[0m ${req.method} ${req.path} by ${req.ip} took ${duration} ms.`;
 
     if (res.locals.error) {
       console.error([log, res.locals.error].join(" "));

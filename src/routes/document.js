@@ -2,8 +2,8 @@
 const database = require("../database");
 
 function postDocumentRoute(req, res) {
-  const doc = database.add(req.body);
-  res.status(201).send(doc);
+  const newDoc = database.add(req.body);
+  res.status(201).send(newDoc);
 }
 
 function getDocumentRoute(req, res) {

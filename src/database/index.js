@@ -5,8 +5,7 @@ class Database {
   }
 
   add(data) {
-    const lastDoc = this.store[this.store.length - 1];
-    const id = (lastDoc?.id || 0) + 1;
+    const id = (this.store[this.store.length - 1]?.id || 0) + 1;
     const newDoc = { id, data };
     this.store.push(newDoc);
     return newDoc;
