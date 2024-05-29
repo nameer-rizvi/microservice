@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint; exit 0",
     "dev": "PORT=3000 NODE_ENV=development nodemon src/index.js",
-    "start": "PORT=3000 NODE_ENV=staging node src/index.js",
+    "start": "PORT=3000 NODE_ENV=test node src/index.js",
     "pm2-start": "yarn && pm2 start ecosystem.config.js && pm2 logs",
     "pm2-restart": "yarn && pm2 restart ecosystem.config.js --update-env && pm2 logs"
   },
