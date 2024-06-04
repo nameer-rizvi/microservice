@@ -15,7 +15,7 @@ class Database {
     return this.store[this.store.findIndex((doc) => doc.id === id)];
   }
 
-  delete(id) {
+  remove(id) {
     const index = this.store.findIndex((doc) => doc.id === id);
     if (index !== -1) this.store.splice(index, 1);
     return { success: index !== -1 };

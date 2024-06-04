@@ -1,8 +1,8 @@
 # microservice
 
-Microservice boilerplate built in Node.js
+Microservice boilerplate built in Node.js.
 
-## Yarn scripts
+## Yarn Scripts
 
 `yarn test`
 
@@ -41,6 +41,7 @@ Restart pm2 processes defined in ecosystem.config.js.
 #### Configuration Example
 
 ```js
+// ecosystem.config.js
 const ecosystemConfig = {
   apps: [
     {

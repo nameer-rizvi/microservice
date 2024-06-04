@@ -1,22 +1,22 @@
 // Document routes are for demo purposes only.
 const database = require("../database");
 
-function postDocumentRoute(req, res) {
-  const newDoc = database.add(req.body);
-  res.status(201).send(newDoc);
+function postDocumentRoute(req, res, next) {
+  const result = database.add(req.body);
+  res.status(201).send(result);
 }
 
 function getDocumentRoute(req, res) {
-  const doc = database.get(+req.params.id);
-  if (doc) {
-    res.status(200).send(doc);
+  const result = database.get(+req.params.id);
+  if (result) {
+    res.status(200).send(result);
   } else {
     res.sendStatus(404);
   }
 }
 
 function deleteDocumentRoute(req, res) {
-  const result = database.delete(+req.params.id);
+  const result = database.remove(+req.params.id);
   if (result.success) {
     res.status(200).send(result);
   } else {
