@@ -1,7 +1,7 @@
 // Document routes are for demo purposes only.
 const database = require("../database");
 
-function postDocumentRoute(req, res, next) {
+function postDocumentRoute(req, res) {
   const result = database.add(req.body);
   res.status(201).send(result);
 }
